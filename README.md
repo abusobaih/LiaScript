@@ -20,7 +20,7 @@ import:   https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
 
 -->
 
-# My Course
+# New Title
 
 This is your **course** initialization stub.
 
