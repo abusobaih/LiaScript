@@ -1,11 +1,11 @@
 <!--
-author:   Your Name
+author:   Abeer Abusobaih
 
-email:    your@mail.org
+email:    aabusobaih@gmail.com
 
 version:  0.0.1
 
-language: de
+language: en
 
 narrator:  US English Female
 
@@ -20,9 +20,9 @@ import:   https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
 
 -->
 
-# New Title
+# Arduino for Kids
 
-This is your **course** initialization stub.
+The objective of the course is to make
 
 Please see the [Docs](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md)
 to find out what is possible in [LiaScript](https://liascript.github.io).
@@ -102,8 +102,9 @@ Images:
     {{|> Arabic Female}}
 عبير ..... اول اختبار
 
+_ Hello _
 
-### Styling
+## Styling
 
 <!-- class = "animated rollIn" style = "animation-delay: 2s; color: purple" -->
 The whole text-block should appear in purple color and with a wobbling effect.
@@ -183,7 +184,7 @@ Even videos or change the language completely.
     {{3}}
 Type "voice" to see a list of all available languages.
 
-# hjgj
+## External links
 
 A drawing example, for demonstrating that any JavaScript library can be used, also for drawing.
 
