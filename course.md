@@ -103,7 +103,7 @@ So, **What is an Arduino ?**
   let's say we have a smart house which is equipped with automated lights, this house checks the light intensity of the environment and turns on at night and turns off during the day.
 
 
-![image example](pic/R.jfif)  <br/> <br/> <br/> <br/> <br/>  ~~So what sort of equipment would be required to build such a system ?!~~ <!-- class = "animated infinite bounce" style = "color: red;" -->
+![image example](pic/R.jfif)  <br/> <br/> <br/> <br/> <br/>  ~~So what sort of equipment would be required to build such a system ?!~~ 
 
 You need a light,  light sensor to give us information of the ambient light, and something in between that gets the input from the light sensor and outputs the signal to the light, this something is the brain of the system, and it called a microcontroller unit.
 
