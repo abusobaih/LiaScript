@@ -50,7 +50,7 @@ import:   https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
 3. To create your own projects.
 
 <br/>
-
+jhjhj
 
 **Previous Knowledge**
 
@@ -211,8 +211,77 @@ There are some ways for powered the Arduino:
 #### Breadboard
 <br/>
 **What is the breadboard?**
-Breadboard helps building electronic circuits without soldering any components together, it used to make the necessary connections between individual components. 
+
+<br/>
+
+It is a rectangular piece of plastic consists of a group of holes, these holes known as connection points are connected in groups of five, there are connections inside those 5 connection points that act like conducting wires. Be carful two adjacent groups are not connected.
+
+Breadboard helps building electronic circuits without soldering any components together, it used to make the necessary connections between individual components.
+
+<br/>
+
+**How you provide power to the breadboard ?**
+
+Most of breadboard types have power rails labeled as + and red color and you can connect a voltage source, and have an easy access to any point. There are a break lines, but you can connect them together using a jumper.
+
+There is also a ground rails labeled as - with blue color and connect it to any ground source.
+
+![image example](pic/bb.jpg)
+
+**How do you connect components on a breadboard ?**
+
+Actually that's so easy, insert the metal leads of your parts inside the connection points. It's important to orient your components the right way.
+
+If you have an integrated circuits or ships place it in the middle of the breadboard, that's what the gap in the middle is designed for.
+
+<br/>
+
+**How to connect components to Arduino**
+
+In Arduino we used a special wires known as jumper wires and they are easy to use and plug directly to most sensors and microcontroller.
+
+Jumper wires have two different types of heads, the one with the pin is known as **male** and the one without pin is known as **female**.
+
+![image example](pic/wire.jpg) ![image example](pic/wiref.jpg)
+<br/>
+
+{1} Breadboard tutorial
+
+!?[Breadboard tutorial](https://www.youtube.com/watch?v=6WReFkfrUIk)
+
 #### Sensors
+<br/>
+
+ *Sensor* : an input device which provides an output signal with respect to a specific physical quantity input. It purpose is to detect events or changes in its environment and send information to other electronics.
+ A sensor is always used with other electronics.
+ Sensors are used in everyday objects such as touch-sensitive elevator buttons. By designed an easy to use microcontroller platforms, the uses of sensors have expanded beyond the traditional fields of temperature, pressure or flow measurement. Moreover, analog sensors such as potentiometers and force-sensing resistors are still used widely. Applications include manufacturing and machinery, airplanes and aerospace, cars, medicine, robotics and many other aspects of our day-to-day life.  
+
+
+ Generally, Sensors are divided into ten categories according to its basic sensing function as following:
+
+ 1. Temperature Sensors
+
+ 2. Photoresistor sensors
+
+ 3. Gas sensors
+
+ 4. Touch sensors
+
+ 5. Magnetic sensors
+
+ 6. Humidity sensors
+
+ 7. Sound sensors
+
+ 8. Radiation sensors
+
+ 9. Color sensors
+
+ 10. Taste sensor
+
+ There is something common in most of sensors is the power pins, most of them have a positive pin which is denoted by the voltage level and a negative pin which is denoted by the ground.
+
+
 ## Programming the Arduino
 #### The IDE Interface
 #### Libraries
