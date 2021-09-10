@@ -939,34 +939,163 @@ How to create your own Arduino library ?
 
 <br/>
 
-The code language that Arduino uses is very similar to C++, which is a common language in the world of computing. The code is a human readable that means it is easy for human to follow. Code has both data and functions.
+The code language that Arduino uses is Arduino C and it's very similar to C++ and C, which is a common language in the world of computing. The code is a human readable that means it is easy for human to follow. Code has both data and functions.
 
-The code consists of two parts: setup and loop. Where void setup is to setup the environment that the code is going to run in. The void loop part is the actual code that is going to be run. When dealing with Arduino it continuously a loop, it supposed be for sensors for example: Ultrasonic sensor, the loop will read what the current distance is depending on what distance is, and it will set off a series of actions and then loop.
+The code consists of two parts: setup and loop. Where `void setup ()` is to setup the environment that the code is going to run in. In this section you can initialize a pin as input or output on your Arduino, and start serial communication. When the program executes it only runs once.
 
-How to write a code?
+<!-- class = "animated rollIn" style = "animation-delay: 3s; color: brown" -->
+*Serial.begin(9600) : This allows to get reading from the Arduino board directly to the computer, so you can know what board is currently experiencing.*
 
-<!-- class = "animated rollIn" style = "animation-delay: 3s; color: darkgrey" -->
-**Comments**
+```javascript
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+  }
+
+```
+<br/>
+ `The void loop ()` part is the actual code that is going to be run. When dealing with Arduino it continuously a loop, it supposed be for sensors for example: Ultrasonic sensor, the loop will read what the current distance is depending on what distance is, and it will set off a series of actions and then loop.
+
+```javascript
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
+}
+
+```
+
+First thing is to understand the data types, data type tells the compiler how to use a particular piece of data for example is it a number and if it is a number what kind of number is it or if it is a character.
+
+`Data Type`
+
+ **integer (int)** : it indicates that the data can be negative or positive and zero. It takes two bytes in the memory and can be a number between -32,767 to  32,767.
+
+ **float** : it can use for a decimal number like 2.162 or in scientific notation like 6.022E23, where the number after e is the exponent (6.002 * 10 ^23). It take 4 bytes in the memory.
+
+ **byte** : can store a number from 0-255 and it takes one byte of a storage.
+
+**boolean** : It takes one bit of data, it can hold one of two values either true or false. False state can be represented also by 0 or a word LOW. True state can be represented by non=zero number or a word HIGH.
+
+**char** : character data type it takes one byte of storage and it hold a character symbol like a letter, letters are stored as a number and that number represent a specific text character in a system called ASCII, ASCII stands for the American Standard Code for information Interchange, and it's the way that text is encoded numerically in programming.  
+
+**array** : collection of variables that are accessed with an index number. You can initialize and size the array such as for example -->  int myarrayVals[6] = {2, 4, -8, 3, 2};
+
+**string** : uses with sequence of characters, for example --> String stringOne = "Hello String";  .
+
+**Variable** : is a type of container used to store data, each variable should have a name known as identifier and a data type. To write a variable you need to follow this formula -->
+
+**dataType    variableName = value;**
+
+`For example: int t = 8; OR char a ='s';`
+
+` const: indicate that the date is read-only`
+
+<br/>
+
+
+`loops`
+
+Loops are used when you want some piece of code to execute over and over.
+
+**while loop**
+
+```javascript
+while (condition) {
+
+  do this
+}
+```
+
+
+The while loop will check the condition first, if it is true the code is executed sequentially, once done,  execution returns to the top of the loop and checks the condition again, and if the code inside the loop still true it will execute again, and returns to the top of the loop, and if it's the code inside the loop false the program will skip the loop and being executing what it comes after the loop.
+
+**For loop**
+
+```javascript
+for (initialization; condition; increment) {
+  statement(s);
+}
+```
+Initialization happens first and just once, then each time the condition is tested if it's true, the statement will execute, then the increment executes, and the condition is tested again until it becomes false then the loop ends.
+
+**do...while loop**
+
+```javascript
+do {
+  statement block
+} while (condition);
+
+```
+The do…​while loop works in the same manner as the while loop, with the exception that the condition is tested at the end of the loop, so the do loop will always run at least once. The condition is Boolean expression that evaluates true or false.
+
+<br/>
+
+`**IF condition**`
+
+```javascript
+if (condition) {
+  statement(s)
+}
+```
+The if statement checks for a condition and executes the following statement or set of statements if the condition is 'true'. The condition is Boolean expression that evaluates true or false.
+
+<br/>
+
+`Pin Mode`
+
+To configure the pin to behave as input or output.
+
+The syntax --> pinMode(pin, mode);
+
+`Digital Read`
+
+Reads the value from a specified digital pin, either HIGH or LOW. It returns high or low.
+ Syntax --> digitalRead(pin);
+
+`Digital Write`
+
+To write a high or low value to a pin. Syntax --> digitalWrite(pin, value); where pin means pin number on the Arduino board and value means high or low.
+
+`Analog Read`
+
+To read the value from the analog pin. The syntax --> analogRead(pin); where pin the analog pin number on the Arduino board.
+
+`Analog Write`
+
+Writes an analog value (PWM wave) to a pin. Can be used to light a LED at varying brightness or drive a motor at various speeds.  Syntax --> analogWrite(pin, value);
+
+
+`delay`
+
+Pauses the program for the amount of time (in milliseconds) specified as parameter. Syntax --> delay(ms);
+
+`Comments`
 
 use to explain more about the author or a brief and explanation about the code
-// for single line comment, /*  ..... */ for multi-line comment.
+// for single line comment, /* for multi-line comment  
+*/.
 
-
-
-
-
-<!-- class = "animated rollIn" style = "animation-delay: 3s; color: red" -->
-**Serial.begin(9600)**
-
-this allows to get reading from the Arduino board directly to the computer, so you can know what board is currently experiencing.
+<br/>
 
 <!-- class = "animated rollIn" style = "animation-delay: 3s; color: red" -->
-Every statement of the code must have at the end a semicolon **;**
+`Every statement of the code must have at the end a semicolon ;`
 
 
 
 
-## Component and Tool Guide
+## Tool Guide
+
+<br/>
+
+To know more about components, functions and libraries, you can visit this website --> [More information](https://www.arduino.cc/reference/en/#functions).
+
+<br/>
+
+To read and know more about built-in examples in Arduino IDE you can visit this link --> [Built-in examples](https://www.arduino.cc/en/Tutorial/BuiltInExamples).
 
 ## Learning by Example
 
@@ -1027,3 +1156,56 @@ void loop() {
 * The Output
 
 !?[video](pic/micro.mp4)
+
+## Quiz
+
+
+1. What does IDE stand for ?
+
+    [[ ]] In Deep Environment.
+    [[X]] Integrated Development Environment.
+    [[ ]] International Deep Environment.
+
+
+2. It starts with a /* and continues until a */  What does this do?
+
+    [[X]] Make a comment.
+    [[ ]] Write a text.
+    [[ ]] Print a star.
+
+3. The function needs to start reading from Arduino to computer ?
+
+    [[ ]] Serial.begin().
+    [[X]] Serial.begin (9600).
+    [[ ]] serial.begin (9600).
+
+4. Which command is called once when the program starts ?
+
+   [[ ]] void loop().
+   [[X]] void setup().
+   [[ ]] void().
+
+5. How many analog pins Arduino UNO has ?
+
+   [[ ]] 5.
+   [[X]] 6.
+   [[ ]] 7.
+
+6. Write  a code that makes the LED blinks.
+
+[[  See the code below ]]
+
+``` json    -the solution
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
+}
+```

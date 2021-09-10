@@ -20,7 +20,7 @@ import:   https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
 
 -->
 
-# Arduino for Kids
+
 
 The objective of the course is to make
 
