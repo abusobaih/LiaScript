@@ -62,6 +62,7 @@ This course is designed for students who have no or a very little prior experien
 
 ![image example](pic/main.jfif)
 
+
 ## Introduction
 <br/>
 
@@ -193,7 +194,7 @@ Crystal Oscillator: On each tick, the microcontroller performs one operation, an
 <!-- class = "animated rollIn" style = "animation-delay: 3s; color: brown" -->
 TX RX Indicator: TX stands for transmit, and RX for receive. They blinking whenever the UNO board is transmitting or receiving data.
 
-
+Atmega328P [Datasheet](http://wiki.amperka.ru/_media/products:arduino-uno:atmega328p-datasheet.pdf)
 
 #### Power Supply
 <br/>
@@ -494,11 +495,13 @@ void loop()
 
 The IR sensor can detect the difference between a reflective and a non-reflective (white/black) surface and output a TTL signal.  It can be used for line following, collision risk detecting or edge detection projects.
 
-The sensor has 3 pins, VCC, OUT, and GND, where VCC and GND have to be connected to 5V and ground on the Arduino board respectively, and OUT pin to any digital input pins on the Arduino board.
+The sensor has 3 pins, VCC, OUT, and GND, where VCC and GND have to be connected to 5V and ground on the Arduino board respectively, and OUT pin to any digital input pins on the Arduino board. It has an infrared LED and a light sensor, which also works in the IR band. The LED illuminates the surface under the sensor in the IR band, and the reflected light is captured by the light sensor.  
 
 {1} The Connection
 
 <br/>
+
+![image example](pic/IRR.jpg)
 
 ![image example](pic/IR.jpg)
 
@@ -1100,6 +1103,9 @@ To read and know more about built-in examples in Arduino IDE you can visit this 
 ## Learning by Example
 
 <br/>
+
+Before you working on any project, you should plan and design it. You should not start implementing the system in practice, while there is still no detailed development plan. The plan should be done in such minute details, that every person can understand how particular sections runs.
+
 
 {1} First example
 
